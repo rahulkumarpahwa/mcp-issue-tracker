@@ -1,0 +1,15 @@
+What is the purpose of using sqlite3.open(readonly) when connecting to a database?
+It ensures that the database connection is read-only, which prevents accidental modifications and provides a safety measure when working with agents or LLMs, reducing the risk of unintended database changes
+
+How do you get the schema of a SQLite database using SQL?
+Use the query SELECT sql FROM sqlite_master WHERE type = 'table' AND sql IS NOT NULL ORDER BY name, which retrieves the SQL creation statements for all tables in the database
+
+What parameters are used when creating a new MCP server instance?
+When creating a new MCP server, you typically specify a name (e.g., 'issue server') and a version (e.g., '1.0')
+
+What is the significance of the MIME type text/plain when registering a resource?
+The MIME type text/plain tells the language model how to interpret the resource's contents, in this case indicating that the resource is plain text data
+
+What method is used to retrieve the SQLite database schema in this code?
+db.all() with a query selecting from sqlite_master
+
