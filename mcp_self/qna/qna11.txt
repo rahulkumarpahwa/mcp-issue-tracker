@@ -1,0 +1,13 @@
+What is the primary purpose of adding resources in an MCP server?
+To attach and interact with various files like database schemas, PDFs, Google Docs, or images, enabling users to ask questions about or analyze the attached resource
+
+
+How do you add a resource to an MCP server?
+Use the plus sign (+) and select 'Add from [Server Name] Database Schema'
+
+What type of files can be added as resources in an MCP server?
+Various file types including PDFs, images, Google Docs, database schemas, and other documents that can be interrogated or analyzed
+
+What potential use case exists for dynamically adding resources?
+Building a Content Management System (CMS) where users can add specific documents or files and ask questions about their content
+
