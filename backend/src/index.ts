@@ -214,8 +214,12 @@ export async function buildApp(
       // Handle all other auth routes normally
       fastify.all("/*", async (request, reply) => {
         try {
-          // Construct the full URL
-          const testUrl = `http://localhost:3000${request.url}`;
+          // Build full URL for BetterAuth, ensuring the `/api/auth` base is present.
+          const baseAuthPath = "/api/auth";
+          const path = request.url.startsWith(baseAuthPath)
+            ? request.url
+            : `${baseAuthPath}${request.url}`;
+          const testUrl = `http://localhost:3000${path}`;
 
           // Convert Fastify headers to Headers object
           const headers = new Headers();
@@ -243,11 +247,22 @@ export async function buildApp(
                 : null,
           });
 
+          // Debug log: proxied URL
+          console.log(`Proxying auth request to: ${testUrl}`);
+
           // Call BetterAuth handler
           const authResponse = await auth.handler(authRequest);
 
           // Get response text
           const responseText = await authResponse.text();
+
+          // If upstream failed, log response for easier debugging
+          if (!authResponse.ok) {
+            console.error(
+              `Upstream auth error: ${authResponse.status} ${testUrl} - response:`,
+              responseText
+            );
+          }
 
           // Set status
           reply.status(authResponse.status);
@@ -297,8 +312,9 @@ export async function buildApp(
   return fastify;
 }
 
-// Start the server if this file is run directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Start the server if this file is run directly (works with tsx)
+const isRunDirectly = process.argv[1]?.includes("index.ts");
+if (isRunDirectly) {
   try {
     const app = await buildApp();
     await app.listen({ port: 3000, host: "0.0.0.0" });
