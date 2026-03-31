@@ -1,0 +1,14 @@
+What is the primary challenge when mapping API calls in an MCP server?
+Directly mapping one API call to one tool request is brittle because it requires maintaining complex sequences, managing ID transfers between calls, and handling dependencies between different API endpoints.
+
+What is the recommended approach for handling complex workflows in an MCP server?
+Use a jobs-oriented approach where the entire workflow is defined step-by-step, allowing the agent to execute multiple API calls in a specific order while managing dependencies and data transfer between steps.
+
+What is a current challenge with authentication in MCP servers?
+Determining how to grant an agent limited, temporary access to act on behalf of a user without providing permanent access to their persona or complete authentication credentials.
+
+Why is maintaining consistent tag management important in issue tracking systems?
+Consistent tag management ensures that related issues can be easily grouped and retrieved, preventing the creation of numerous redundant or overly specific tags that reduce system usability.
+
+What is a potential workflow enhancement for AI-assisted issue tracking?
+Allow AI to create, assign, and manage issues on behalf of users, including creating detailed issues with context, assigning tags and priority, and later revisiting and acting on those issues.
