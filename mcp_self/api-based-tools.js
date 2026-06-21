@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-export default function apiBasedTools(server) {
+export default function apiBasedTools(server) { // this will define the tools for the API-based server for the model / mcp
+  // server is the MCP server instance that we will use to register the tools. The tools will be used to interact with the API-based backend for the issue tracker application.
   const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3000/api";
 
   // Helper function to make HTTP requests
@@ -29,7 +30,7 @@ export default function apiBasedTools(server) {
       try {
         jsonResult = JSON.parse(result);
       } catch {
-        jsonResult = result;
+        jsonResult = result; // If response is not JSON, return as text
       }
 
       return {
@@ -39,7 +40,7 @@ export default function apiBasedTools(server) {
       };
     } catch (error) {
       return {
-        status: 0,
+        status: 0, // Indicate network error or other issues
         error: error.message,
       };
     }
@@ -47,7 +48,7 @@ export default function apiBasedTools(server) {
 
   // Issues Tools
 
-  server.registerTool(
+  server.registerTool( // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to get a list of issues with optional filtering based on various parameters like status, assigned user, tags, search query, pagination, priority, and creator. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP GET request to the API endpoint to fetch the issues based on the provided parameters and returns the result in a structured format that can be easily consumed by the model.
     "issues-list",
     {
       title: "List Issues",
