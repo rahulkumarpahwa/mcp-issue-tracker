@@ -1,0 +1,11 @@
+What file extension is typically required when importing modules in this context?
+.js is required when importing modules in this context
+
+What potential issue can arise with optional parameters and arrays in type definitions?
+Incorrect placement of parentheses can make an entire array optional instead of specific array elements being optional
+
+What does the issue tracking system seem to do automatically when creating a new issue?
+It can automatically add additional context or details to an issue, such as suggesting OAuth implementation when creating an issue about Google Login
+
+What are the default properties that can be set when creating a new issue?
+Priority level (such as medium), status (such as in progress), and description can be set when creating a new issue

@@ -16,7 +16,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
 
     // Merge other options except headers (which we already handled)
     const { headers: _, ...otherOptions } = options;
-    Object.assign(config, otherOptions);
+    Object.assign(config, otherOptions); // Merge other options into config
 
     if (data) {
       config.body = JSON.stringify(data);
@@ -36,7 +36,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
       return {
         status: response.status,
         data: jsonResult,
-        headers: Object.fromEntries(response.headers.entries()),
+        headers: Object.fromEntries(response.headers.entries()), // Convert headers to a plain object
       };
     } catch (error) {
       return {
@@ -113,7 +113,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "issues-create",
+    "issues-create", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to create a new issue with the provided parameters like title, description, status, priority, assigned user ID, and tag IDs. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP POST request to the API endpoint to create a new issue with the provided parameters and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Create Issue",
       description: "Create a new issue",
@@ -155,7 +155,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "issues-get",
+    "issues-get", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to get a specific issue by its ID. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP GET request to the API endpoint to fetch the issue based on the provided ID and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Get Issue by ID",
       description: "Get a specific issue by its ID",
@@ -184,7 +184,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "issues-update",
+    "issues-update", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to update an existing issue by its ID with the provided parameters like title, description, status, priority, assigned user ID, and tag IDs. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP PUT request to the API endpoint to update the issue based on the provided ID and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Update Issue",
       description: "Update an existing issue",
@@ -227,7 +227,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "issues-delete",
+    "issues-delete", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to delete an existing issue by its ID. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP DELETE request to the API endpoint to delete the issue based on the provided ID and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Delete Issue",
       description: "Delete an issue by ID",
@@ -258,7 +258,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   // Tags Tools
 
   server.registerTool(
-    "tags-list",
+    "tags-list", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to get a list of all available tags. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP GET request to the API endpoint to fetch the tags and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "List Tags",
       description: "Get all available tags",
@@ -283,7 +283,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "tags-create",
+    "tags-create", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to create a new tag with the provided parameters like name and color. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP POST request to the API endpoint to create a new tag with the provided parameters and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Create Tag",
       description: "Create a new tag",
@@ -315,7 +315,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "tags-delete",
+    "tags-delete", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to delete an existing tag by its ID. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP DELETE request to the API endpoint to delete the tag based on the provided ID and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Delete Tag",
       description: "Delete a tag by ID",
@@ -346,7 +346,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   // Users Tools
 
   server.registerTool(
-    "users-list",
+    "users-list", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to get a list of all users. The tool will also require an API key for authentication. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP GET request to the API endpoint to fetch the users and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "List Users",
       description: "Get all users",
@@ -373,7 +373,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   // API Key Tools
 
   server.registerTool(
-    "api-key-verify",
+    "api-key-verify", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to verify if an API key is valid. The input schema defines the expected parameters for the tool, and the implementation of the tool makes an HTTP POST request to the API endpoint to verify the API key and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Verify API Key",
       description: "Verify if an API key is valid",
@@ -402,7 +402,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   // Health Check Tools
 
   server.registerTool(
-    "health-status",
+    "health-status", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to get the health status of the API. The implementation of the tool makes an HTTP GET request to the API endpoint to fetch the health status and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Health Status",
       description: "Get the health status of the API",
@@ -425,7 +425,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "health-ready",
+    "health-ready", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to check if the API is ready to serve requests. The implementation of the tool makes an HTTP GET request to the API endpoint to check the readiness of the API and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Readiness Probe",
       description: "Check if the API is ready to serve requests",
@@ -448,7 +448,7 @@ export default function apiBasedTools(server) { // this will define the tools fo
   );
 
   server.registerTool(
-    "health-live",
+    "health-live", // this is the tool we register to the server, and we will use this tool to interact with the API-based backend for the issue tracker application. The tool will be used to check if the API is alive. The implementation of the tool makes an HTTP GET request to the API endpoint to check the liveness of the API and returns the result in a structured format that can be easily consumed by the model.
     {
       title: "Liveness Probe",
       description: "Check if the API is alive",

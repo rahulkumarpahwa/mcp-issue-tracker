@@ -1,14 +1,15 @@
-What is the purpose of the makeRequest function in the code?
-The makeRequest function is a helper function designed to make HTTP requests with configurable method, URL, data, and options. It handles JSON serialization, fetches the response, parses JSON, and returns the status, data, and headers of the request.
+What is the purpose of using sqlite3.open(readonly) when connecting to a database?
+It ensures that the database connection is read-only, which prevents accidental modifications and provides a safety measure when working with agents or LLMs, reducing the risk of unintended database changes
 
-What are the possible values for the status enum in the issue creation schema?
-The status enum can have three possible values: 'not started', 'in progress', or 'done'.
+How do you get the schema of a SQLite database using SQL?
+Use the query SELECT sql FROM sqlite_master WHERE type = 'table' AND sql IS NOT NULL ORDER BY name, which retrieves the SQL creation statements for all tables in the database
 
-What are the possible values for the priority enum in the issue creation schema?
-The priority enum can have four possible values: 'low', 'medium', 'high', and 'urgent'.
+What parameters are used when creating a new MCP server instance?
+When creating a new MCP server, you typically specify a name (e.g., 'issue server') and a version (e.g., '1.0')
 
-What is the default base URL for the API in the code?
-The default base URL is set to 'HTTP://localhost:3000', which is the port the API server is running on.
+What is the significance of the MIME type text/plain when registering a resource?
+The MIME type text/plain tells the language model how to interpret the resource's contents, in this case indicating that the resource is plain text data
 
-Why does the code use JSON.stringify(result, null, 2) when returning the result?
-Using JSON.stringify(result, null, 2) adds whitespace and indentation to the JSON output, which can help language models interpret the data more accurately by making the structure more readable.
+What method is used to retrieve the SQLite database schema in this code?
+db.all() with a query selecting from sqlite_master
+

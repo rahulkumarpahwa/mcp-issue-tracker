@@ -1,0 +1,14 @@
+What is the purpose of the makeRequest function in the code?
+The makeRequest function is a helper function designed to make HTTP requests with configurable method, URL, data, and options. It handles JSON serialization, fetches the response, parses JSON, and returns the status, data, and headers of the request.
+
+What are the possible values for the status enum in the issue creation schema?
+The status enum can have three possible values: 'not started', 'in progress', or 'done'.
+
+What are the possible values for the priority enum in the issue creation schema?
+The priority enum can have four possible values: 'low', 'medium', 'high', and 'urgent'.
+
+What is the default base URL for the API in the code?
+The default base URL is set to 'HTTP://localhost:3000', which is the port the API server is running on.
+
+Why does the code use JSON.stringify(result, null, 2) when returning the result?
+Using JSON.stringify(result, null, 2) adds whitespace and indentation to the JSON output, which can help language models interpret the data more accurately by making the structure more readable.
