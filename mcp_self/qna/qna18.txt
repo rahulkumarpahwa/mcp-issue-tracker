@@ -1,0 +1,14 @@
+What are the key steps when adding tags to an issue in this system?
+First use tags-list to retrieve all available tags, then use the tag IDs when creating an issue to properly assign the tags
+
+What makes testing MCP servers relatively straightforward?
+MCP servers are designed to have deterministic behavior, making standard I/O and HTTP testing easy
+
+What potential issue can arise when building complex AI-driven workflows?
+As workflows become more sequential and complex, the likelihood of failure increases, creating a 'house of cards' effect
+
+What approach does the instructor recommend for AI-driven workflows?
+Focus on job-based tasks rather than direct API-based interactions to improve reliability and user experience
+
+Why might AI-generated tests require human verification?
+AI can generate tests that are designed to pass rather than rigorously test the actual functionality, so human review is necessary to ensure meaningful testing
