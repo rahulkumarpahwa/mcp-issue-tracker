@@ -1,0 +1,14 @@
+What does the api-based-tools directory contain?
+It contains all the API endpoints and tools, including tags, delete, users list, and a health check
+
+What actions did the system perform when creating a new issue?
+It grabbed users, looked for tags, created a new tag if needed, and then created an issue with specified attributes like urgency, assignment, and description
+
+What attributes were set on the newly created issue?
+The issue was marked as urgent, assigned to the admin user, not started, and included a description about adding GitHub as an auth provider
+
+What does the health check endpoint provide?
+The health check provides status information about the API's readiness and current state
+
+What happened when creating a tag that didn't previously exist?
+The system automatically created a new tag when one was not already present in the system
