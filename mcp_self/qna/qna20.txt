@@ -1,0 +1,14 @@
+What is the primary advantage of using job-based tools in an MCP server?
+Job-based tools reduce complexity and chaos by providing specific, controlled actions that work consistently, minimizing the potential for errors and improving predictability of AI interactions
+
+How can job-based tools help manage potential risks with AI systems?
+By limiting the tools and actions available to an AI, job-based tools can prevent unintended actions like accidentally dropping database tables or creating inappropriate tickets, thus controlling the potential chaos of AI interactions
+
+What is the recommended approach for developing job-based tools?
+Work backwards from user needs, create specific tools for common use cases, and monitor usage to refine and reduce the number of tools based on actual utilization
+
+Why might job-based tools be particularly important for edge devices?
+Edge devices have limited computational resources and memory, so job-based tools can help ensure tasks are completed correctly and efficiently within those constraints
+
+What strategy can be used when initially designing job-based tools for an organization?
+Start with a broad set of potential tools (around 20), then observe and reduce to the 7 tools that are actually used, continuously refining based on actual usage patterns

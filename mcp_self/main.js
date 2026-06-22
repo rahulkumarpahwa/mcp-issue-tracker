@@ -3,7 +3,8 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import sqlite3 from "sqlite3";
 import path from "path";
 import { fileURLToPath } from "url";
-import apiBasedTools from "./api-based-tools.js";
+// import apiBasedTools from "./api-based-tools.js";
+import jobsBasedTools from "./jobs-based-tools.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,7 +14,9 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
-apiBasedTools(server); // this will register the API-based tools to the server, which will allow the model to interact with the API-based backend for the issue tracker application. The tools will be used to perform various operations like listing issues, creating issues, updating issues, and deleting issues through the API endpoints defined in the backend. The tools will also handle authentication and error handling for the API requests, making it easier for the model to interact with the backend and perform the necessary operations on the issues data.
+// apiBasedTools(server); // this will register the API-based tools to the server, which will allow the model to interact with the API-based backend for the issue tracker application. The tools will be used to perform various operations like listing issues, creating issues, updating issues, and deleting issues through the API endpoints defined in the backend. The tools will also handle authentication and error handling for the API requests, making it easier for the model to interact with the backend and perform the necessary operations on the issues data.
+
+jobsBasedTools(server); // this will register the job-based tools to the server, which will allow the model to interact with the job-based backend for the issue tracker application. The tools will be used to perform various operations like creating issues, updating issues, and deleting issues through the job-based system defined in the backend. The tools will handle authentication and error handling for the job-based requests, making it easier for the model to interact with the backend and perform the necessary operations on the issues data.
 
 server.registerResource(
   "database-schema",
