@@ -1,0 +1,14 @@
+What is the primary limitation of standard IO transport for servers?
+It runs locally and is necessarily tied to the specific machine where it is running, which makes it difficult to use for cloud or client services
+
+What does SSE stand for in the context of server communication?
+Server Side Events
+
+What is the main issue with Server Side Events (SSE) when used over networks?
+SSE is stateful and has difficulty handling dropped sessions, making it unreliable for network communications
+
+What is the recommended alternative to Server Side Events for remote server communication?
+Streamable HTTP
+
+How can Server Side Events be conceptually understood?
+As a method of bridging standard input/output to the Internet, working similarly to standard IO but across network connections
