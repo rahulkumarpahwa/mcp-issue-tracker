@@ -1,0 +1,14 @@
+What command is used to install Claude code globally?
+npm install -g anthropic-ai claude-code
+
+What command lists the installed Claude MCP connections?
+Claude MCP list
+
+What type of GitHub token is now recommended for authentication?
+Fine-grained personal access tokens
+
+What repository permissions are essential when generating a GitHub personal access token?
+All repositories, contents, and potentially actions, code spaces, and secrets
+
+How do you add a NEON API connection using Claude MCP?
+Use the command 'Claude MCP add' followed by the endpoint, and then provide the authorization bearer token with the NEON API token
