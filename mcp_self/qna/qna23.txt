@@ -1,0 +1,14 @@
+What is the primary concept behind Vibe coding?
+Adding multiple MCP servers to an MCP client with local file system access to accomplish tasks
+
+What are some of the potential risks when using MCP servers with database access?
+Potential supply chain attacks, possibility of agents performing nefarious actions like dumping or dropping database tables, unauthorized write access to production databases
+
+What does the instructor recommend for working with agents and databases?
+Using ORMs, specifically recommending Prisma and Drizzle, and emphasizing not to modify migrations directly
+
+What is Context 7 and what makes it useful?
+A RAG (Retrieval-Augmented Generation) database from Upstash that contains up-to-date documentation, allowing LLMs to access the most current technical information
+
+What advantage does Context 7 provide for working with new features?
+It can provide information about very recent features that might not yet be in the training data of other AI models like Claude or ChatGPT
