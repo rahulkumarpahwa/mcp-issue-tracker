@@ -1,0 +1,14 @@
+What is one challenge with Server-Sent Events (SSEs) related to scaling?
+SSEs were difficult to horizontally scale across multiple servers
+
+What unique identifier is typically used in session management for HTTP connections?
+A UUID (Universally Unique Identifier) is used as a session identifier
+
+What is a potential security risk when handling sessions without proper protection?
+Without DNS rebinding protection, an attacker could potentially hijack a session by intercepting and reusing a session ID
+
+In session management, what typically happens when a session is no longer needed?
+The session is deleted or closed to free up resources
+
+What storage method can be used for scaling session management across multiple servers?
+Redis can be used to store and retrieve session information across multiple servers
