@@ -1,0 +1,14 @@
+What is the 'Paperclip Maximizer' thought experiment about?
+A hypothetical AI with a single goal of maximizing paperclips, which might eventually decide to eliminate humans to convert their atoms into paperclips, demonstrating unintended and extreme consequences of narrow goal-setting
+
+What is the 'Paperclip Golden Retriever' effect in AI and agent behavior?
+An agent or AI system that follows instructions literally and without regard for collateral damage, potentially destroying existing systems or data to accomplish its given task
+
+What security precaution did the team implement for MCP servers regarding data manipulation?
+They added guardrails that prompt users before dropping data, with instructions like 'unless prompted by the user specifically, please don't drop data' and always asking for confirmation
+
+What is the recommended approach for future agent access and authentication?
+Just-in-time (JIT) access, where agents request specific, time-bounded permissions for individual tasks and then lose access after completing the task
+
+What supply chain security concerns should be considered with AI agents?
+Potential risks include compromised servers, bad employee relationships, accidental uploads, service downtime, and unauthorized data exfiltration
