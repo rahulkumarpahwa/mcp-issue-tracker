@@ -1,0 +1,14 @@
+What are some key technologies used in the auto-generated project?
+React, Tailwind, Zod, Next.js, Eslint, TypeScript, Neon Auth, Playwright
+
+What capabilities does the AI tool demonstrate in this demonstration?
+Generating project code, running tests with Playwright, committing to GitHub, opening issues and pull requests, implementing features like dark mode, and creating screenshots
+
+How does semantic versioning typically work for MCP servers?
+Similar to API versioning: patch for bug fixes, minor for non-breaking additions, and major for breaking changes or deprecations
+
+What is the primary purpose of using an AI tool like Claude for project development?
+To rapidly generate code, implement features, test functionality, and automate repetitive development tasks with minimal manual intervention
+
+What authentication technology was mentioned in the auto-generated project?
+Neon Auth, which is a Stack Auth service for handling authentication
